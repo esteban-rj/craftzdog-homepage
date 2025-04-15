@@ -12,7 +12,7 @@ const VoxelDog = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const refRenderer = useRef()
-  const urlDogGLB = (process.env.NODE_ENV === 'production' ? 'https://craftzdog.global.ssl.fastly.net/homepage' : '') + '/dog.glb'
+  const urlDogGLB = '/25d.glb'
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer
@@ -61,7 +61,7 @@ const VoxelDog = () => {
         0.01,
         50000
       )
-      camera.position.copy(initialCameraPosition)
+      //camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
 
       const ambientLight = new THREE.AmbientLight(0xcccccc, Math.PI)

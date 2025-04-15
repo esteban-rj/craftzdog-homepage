@@ -35,7 +35,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Esteban Romero
           </Heading>
-          <p>Software Developer in Bank of Bogota</p>
+          Software Developer in Bank of Bogota
         </Box>
         <Box
           flexShrink={0}
