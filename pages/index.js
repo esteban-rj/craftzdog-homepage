@@ -6,13 +6,14 @@ import {
   Button,
   List,
   ListItem,
-  useColorModeValue
+  useColorModeValue,
+  Flex,
+  Text
 } from '@chakra-ui/react'
 import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { IoLogoLinkedin } from 'react-icons/io5'
 import Image from 'next/image'
 
 const Home = () => (
@@ -67,7 +68,15 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-        I enjoy working in the technological field to seek and innovate in the search for solutions to client requirements. I enjoy development, architecture, and artificial intelligence. I have experience in architectural development and design, primarily using technologies such as AWS, Python, Go, Node (TypeScript), Java, IAC with Terraform, and Angular for full-stack website development. I have had the opportunity to work and research AI implementations for various purposes. I am currently part of AI research groups at my current company. I enjoy learning new things every day.
+          I enjoy working in the technological field to seek and innovate in the
+          search for solutions to client requirements. I enjoy development,
+          architecture, and artificial intelligence. I have experience in
+          architectural development and design, primarily using technologies
+          such as AWS, Python, Go, Node (TypeScript), Java, IAC with Terraform,
+          and Angular for full-stack website development. I have had the
+          opportunity to work and research AI implementations for various
+          purposes. I am currently part of AI research groups at my current
+          company. I enjoy learning new things every day.
         </Paragraph>
       </Section>
 
@@ -75,112 +84,69 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Experience
         </Heading>
-        <Box display={{ md: 'flex' }}>
-        <Box
-          flexShrink={0}
-          mt={{ base: 4, md: 0 }}
-          ml={{ md: 6 }}
-          textAlign="center"
-        >
+        <Flex direction="row" align="center" gap={4}>
           <Box
             borderColor="whiteAlpha.800"
             borderWidth={2}
             borderStyle="solid"
-            w="100px"
-            h="100px"
-            display="inline-block"
+            w="80px"
+            h="80px"
             borderRadius="full"
             overflow="hidden"
           >
-          <Image
+            <Image
               src="/images/banco_de_bogota_logo.png"
               alt="Profile image"
-              width="100"
-              height="100"
-          />
+              width="80"
+              height="80"
+            />
           </Box>
+          <Box>
+            <Heading size="sm">Full stack developer</Heading>
+            <Text fontSize="12px">
+              <List>
+                <ListItem>
+                  Member of the digital strategy of Banco de Bogotá.
+                </ListItem>
+                <ListItem>
+                  Leader of the authentication innovation molecule.
+                </ListItem>
+                <ListItem>
+                  Member of the digital strategy research group.
+                </ListItem>
+                <ListItem>
+                  Full Stack Developer for authentication and recognition
+                  solutions
+                </ListItem>
+                <ListItem>Facial and security controls. </ListItem>
+              </List>
+            </Text>
           </Box>
-        </Box>
-        <Box flexGrow={1}>
-          <ul>
-          <li>Miembro de estrategia digital del Banco de Bogotá.</li>
-          <li>Lider de la moleclia de innovación de autenticación.</li>
-          <li>Miembro de semillero de investigación de estregia digital.</li>
-          <li>Desarrollador Flil Stack para soluciones de autenticación, reconocimiento</li>
-          <li>facial y controles de seguridad.</li>
-          </ul>
-        </Box>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
-        </BioSection>
+        </Flex>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          I ♥
+          What I Love ♥
         </Heading>
         <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
-          </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
+          Music (From Japan to Mexico), Italian Food (Chef in development), Machine Learning, Software Architecture
         </Paragraph>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          On the web
+        Bio and Certifications
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+            <Link href="https://www.linkedin.com/in/esteban-elias-romero-jaimes-7871881a4/" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<IoLogoGithub />}
+                leftIcon={<IoLogoLinkedin />}
               >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @inkdrop_app (English)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoInstagram />}
-              >
-                @craftzdog
+                Esteban Romero
               </Button>
             </Link>
           </ListItem>
